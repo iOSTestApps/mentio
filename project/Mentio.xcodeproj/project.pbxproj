@@ -684,6 +684,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = MT;
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Martin Hartl";
 				TargetAttributes = {

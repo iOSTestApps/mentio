@@ -11,5 +11,6 @@
 @interface MTDatabaseManager : NSObject
 
 + (void)setUpFCModel;
++ (void)restoreFromMentioFileAtURL:(NSURL *)url;
 
 @end

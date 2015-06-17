@@ -14,8 +14,36 @@
 
 @implementation MTDatabaseManager
 
++ (void)restoreFromMentioFileAtURL:(NSURL *)url {
+    BOOL success;
+    NSError *error;
+    
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    
+    NSArray *paths = [[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask];
+    NSURL *documentsURL = [paths lastObject];
+    NSURL *result;
+    
+    NSString *filePath = [[documentsURL URLByAppendingPathComponent:@"db.mentio"] path];
+    
+    if ([fileManager fileExistsAtPath:filePath]) {
+        NSData *content = [NSData dataWithContentsOfURL:url];
+        [content writeToFile:filePath atomically:YES];
+        
+    } else {
+        success =[fileManager copyItemAtURL:url toURL:documentsURL error:&error];
+        [self renameFileFrom:url.lastPathComponent to:@"db.mentio"];
+    }
+    
+    
+    [self setUpFCModel];
+}
+
 + (void)setUpFCModel {
-    NSString *dbPath = [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0] stringByAppendingPathComponent:@"db.sqlite3"];
+    
+    [self renameFileFrom:@"db.sqlite3" to:@"db.mentio"];
+    
+    NSString *dbPath = [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0] stringByAppendingPathComponent:@"db.mentio"];
     NSLog(@"DB path: %@", dbPath);
     
     // New DB on every launch for testing (comment out for persistence testing)
@@ -486,6 +514,22 @@
         
         [db commit];
     }];
+}
+
++ (BOOL)renameFileFrom:(NSString*)oldName to:(NSString *)newName
+{
+    NSString *documentDir = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,
+                                                                 NSUserDomainMask, YES) objectAtIndex:0];
+    NSString *oldPath = [documentDir stringByAppendingPathComponent:oldName];
+    NSString *newPath = [documentDir stringByAppendingPathComponent:newName];
+    
+    NSFileManager *fileMan = [NSFileManager defaultManager];
+    NSError *error = nil;
+    if (![fileMan moveItemAtPath:oldPath toPath:newPath error:&error])
+    {
+        return NO;
+    }
+    return YES;
 }
 
 
