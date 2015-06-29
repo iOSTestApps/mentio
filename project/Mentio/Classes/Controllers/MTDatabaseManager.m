@@ -14,40 +14,65 @@
 
 @implementation MTDatabaseManager
 
-+ (void)restoreFromMentioFileAtURL:(NSURL *)url {
-    BOOL success;
++ (NSString *)databasePath {
+    return [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0] stringByAppendingPathComponent:@"db.mentio"];
+}
+
++ (void)restoreFromMentioFileAtURL:(NSURL *)url success:(void (^)())successBlock rollback:(void(^)())rollbackBlock {
     NSError *error;
     
     NSFileManager *fileManager = [NSFileManager defaultManager];
     
     NSArray *paths = [[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask];
     NSURL *documentsURL = [paths lastObject];
-    NSURL *result;
     
     NSString *filePath = [[documentsURL URLByAppendingPathComponent:@"db.mentio"] path];
     
     if ([fileManager fileExistsAtPath:filePath]) {
+        [self renameFileFrom:@"db.mentio" to:@"db.mentio.backup"];
         NSData *content = [NSData dataWithContentsOfURL:url];
         [content writeToFile:filePath atomically:YES];
         
     } else {
-        success =[fileManager copyItemAtURL:url toURL:documentsURL error:&error];
+        [fileManager copyItemAtURL:url toURL:documentsURL error:&error];
         [self renameFileFrom:url.lastPathComponent to:@"db.mentio"];
     }
     
     
-    [self setUpFCModel];
+    BOOL success = [self setUpFCModel];
+    
+    if (!success) {
+        [fileManager removeItemAtPath:filePath error:nil];
+        [self renameFileFrom:@"db.mentio.backup" to:@"db.mentio"];
+        [self setUpFCModel];
+        if (rollbackBlock) {
+            rollbackBlock();
+        }
+        return;
+    }
+    
+    if (successBlock) {
+        NSString *backupFilePath = [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0] stringByAppendingPathComponent:@"db.mentio.backup"];
+        [fileManager removeItemAtPath:backupFilePath error:nil];
+        successBlock();
+    }
+    return;
+    
+    
+    
 }
 
-+ (void)setUpFCModel {
++ (BOOL)setUpFCModel {
     
     [self renameFileFrom:@"db.sqlite3" to:@"db.mentio"];
     
-    NSString *dbPath = [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0] stringByAppendingPathComponent:@"db.mentio"];
+    NSString *dbPath = [self databasePath];
     NSLog(@"DB path: %@", dbPath);
     
     // New DB on every launch for testing (comment out for persistence testing)
 //    [NSFileManager.defaultManager removeItemAtPath:dbPath error:NULL];
+    
+    __block BOOL success;
     
     [FCModel openDatabaseAtPath:dbPath withSchemaBuilder:^(FMDatabase *db, int *schemaVersion) {
         [db setCrashOnErrors:NO];
@@ -58,8 +83,6 @@
             int lastErrorCode = db.lastErrorCode;
             NSString *lastErrorMessage = db.lastErrorMessage;
             [db rollback];
-            
-            NSAssert3(0, @"Migration statement %d failed, code %d: %@", statement, lastErrorCode, lastErrorMessage);
         };
         
         
@@ -512,8 +535,10 @@
         }
         
         
-        [db commit];
+        success = [db commit];
     }];
+    
+    return success;
 }
 
 + (BOOL)renameFileFrom:(NSString*)oldName to:(NSString *)newName

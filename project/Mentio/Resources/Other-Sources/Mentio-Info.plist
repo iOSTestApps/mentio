@@ -17,6 +17,7 @@
 			<array>
 				<string>Icon-Small.png</string>
 				<string>Icon.png</string>
+				<string>80</string>
 			</array>
 			<key>CFBundleTypeMIMETypes</key>
 			<array>
@@ -46,11 +47,11 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>2.0.1</string>
+	<string>2.0.2</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
-	<string>5712</string>
+	<string>5765</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>UIAppFonts</key>
@@ -96,6 +97,10 @@
 			<string>me.mhaddl.mentio</string>
 			<key>UTTypeReferenceURL</key>
 			<string>http://mhaddl.me</string>
+			<key>UTTypeSize320IconFile</key>
+			<string>120</string>
+			<key>UTTypeSize64IconFile</key>
+			<string>80</string>
 			<key>UTTypeTagSpecification</key>
 			<dict>
 				<key>public.filename-extension</key>

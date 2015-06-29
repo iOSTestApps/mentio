@@ -22,6 +22,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *labelAttribution;
 @property (weak, nonatomic) IBOutlet UILabel *labelAffiliateToken;
 @property (weak, nonatomic) IBOutlet UILabel *labelArchive;
+@property (weak, nonatomic) IBOutlet UILabel *labelExport;
 @end
 
 @implementation MTSettingsViewController
@@ -47,6 +48,7 @@
     self.labelAttribution.text = NSLocalizedString(@"acknowledgment.title", @"Attribution");
     self.labelAffiliateToken.text = NSLocalizedString(@"mtsettingsviewcontroller.settokenlabel.text", @"use own token");
     self.labelArchive.text = NSLocalizedString(@"mtsettingsviewcontroller.archivelabel.text", "archive");
+    self.labelExport.text = NSLocalizedString(@"mtsettingsviewcontroller.exportlabel.text", @"export");
     
     UIFont *prefFont = [UIFont preferredAvenirFontForTextStyle:UIFontTextStyleBody];
     
@@ -58,6 +60,7 @@
     self.labelUseLightTheme.font = prefFont;
     self.labelAffiliateToken.font = prefFont;
     self.labelArchive.font = prefFont;
+    self.labelExport.font = prefFont;
     
     self.tableView.dataSource = self;
     self.tableView.delegate = self;

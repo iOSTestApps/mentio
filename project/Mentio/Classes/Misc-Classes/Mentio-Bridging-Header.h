@@ -11,3 +11,7 @@
 #import "Movie.h"
 #import "TVSeason.h"
 #import "Book.h"
+#import "UIFont+CustomFontsContentSizes.h"
+#import "MHFancyPants.h"
+#import "MTColorConstants.h"
+#import "MTDatabaseManager.h"

@@ -10,7 +10,9 @@
 
 @interface MTDatabaseManager : NSObject
 
-+ (void)setUpFCModel;
-+ (void)restoreFromMentioFileAtURL:(NSURL *)url;
++ (BOOL)setUpFCModel;
++ (void)restoreFromMentioFileAtURL:(NSURL *)url success:(void (^)())successBlock rollback:(void(^)())rollbackBlock;
+
++ (NSString *)databasePath;
 
 @end

@@ -99,6 +99,17 @@
 /* MTSettingsViewController */
 "mtsettingsviewcontroller.settokenlabel.text" = "Set own Affiliate Token";
 "mtsettingsviewcontroller.archivelabel.text" = "Archive";
+"mtsettingsviewcontroller.exportlabel.text" = "Export Database";
+
+/* MTExportTableViewController */
+"mtexporttableviewcontroller.tableview.footer.text" = "Export the database by mail or a different App. Open the exported file using Mentio to restore the data.";
 
 /* Notification */
 "mtnotification.newpricefor" = "New price for";
+
+/* Database import */
+"databaseimport.alert.title" = "Import database";
+"databaseimport.alert.text" = "Do you want to import the database? Your old database will be overwritten.";
+"databaseimport.alert.no" = "No";
+"databaseimport.alert.yes" = "Yes";
+"databaseimport.alert.error" = "Importing the database failed.";

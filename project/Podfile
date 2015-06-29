@@ -11,3 +11,4 @@ pod "URBMediaFocusViewController", :git => 'https://github.com/mhaddl/URBMediaFo
 pod "SZTextView"
 pod "MHSegmentedView"
 pod 'MHAlbumView'
+pod 'SVProgressHUD'

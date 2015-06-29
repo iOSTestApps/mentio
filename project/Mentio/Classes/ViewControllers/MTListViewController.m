@@ -28,6 +28,7 @@
 #import "MTStatusBarConstants.h"
 #import "MTItunesClient.h"
 #import "Mentio-Swift.h"
+#import "MTNotificationConstants.h"
 
 @interface MTListViewController () <MTThemeProtocol>
 
@@ -65,7 +66,8 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(applyTheme:) name:MTThemeChangedNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(showAddView) name:[MTAddViewConstants didShow] object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(showAddView) name:[MTAddViewConstants didHide] object:nil];
-
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reloadAll) name:MTDatabaseGotImportedNotification object:nil];
+    
     [self.tableView setContentInset:UIEdgeInsetsMake(0, 0, 44, 0)];
     
     self.tableView.showsVerticalScrollIndicator = NO;
@@ -460,6 +462,15 @@
     } else {
         [[NSNotificationCenter defaultCenter] postNotificationName:MTHideStatusBarView object:nil];
     }
+}
+
+- (void)reloadAll {
+    [self.dict reloadArrayForSection:MTSectionTypeMusic archived:self.archive];
+    [self.dict reloadArrayForSection:MTSectionTypeMovie archived:self.archive];
+    [self.dict reloadArrayForSection:MTSectionTypeApp archived:self.archive];
+    [self.dict reloadArrayForSection:MTSectionTypeBook archived:self.archive];
+    [self.dict reloadArrayForSection:MTSectionTypeTVShow archived:self.archive];
+    [self.tableView reloadData];
 }
 
 @end
