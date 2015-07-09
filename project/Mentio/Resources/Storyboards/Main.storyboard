@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="15A178w" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="15A204h" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -204,7 +204,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CJ2-BL-ELN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5190" y="-377"/>
+            <point key="canvasLocation" x="4694" y="-1197"/>
         </scene>
         <!--List View Controller-->
         <scene sceneID="Ugo-xd-T2s">
@@ -309,7 +309,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nPe-Dd-d46" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="8269" y="1041"/>
+            <point key="canvasLocation" x="4652" y="17"/>
         </scene>
         <!--Detail-->
         <scene sceneID="7Av-o4-4Nt">
@@ -336,7 +336,7 @@
                                     <constraint firstAttribute="width" constant="90" id="hpo-rg-YTw"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label Label Label Label Label Label Label" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="450" translatesAutoresizingMaskIntoConstraints="NO" id="S1H-IL-WXm">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artist" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="450" translatesAutoresizingMaskIntoConstraints="NO" id="S1H-IL-WXm">
                                 <rect key="frame" x="107" y="120" width="450" height="42"/>
                                 <animations/>
                                 <constraints>
@@ -346,7 +346,7 @@
                                 <color key="textColor" red="0.45882352941176469" green="0.52549019607843139" blue="0.6470588235294118" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabel" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="450" translatesAutoresizingMaskIntoConstraints="NO" id="DdY-0L-NoJ">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="450" translatesAutoresizingMaskIntoConstraints="NO" id="DdY-0L-NoJ">
                                 <rect key="frame" x="107" y="72" width="450" height="50"/>
                                 <animations/>
                                 <constraints>
@@ -399,7 +399,7 @@
                             </view>
                         </subviews>
                         <animations/>
-                        <color key="backgroundColor" red="0.090196078431372548" green="0.10588235294117647" blue="0.12941176470588237" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.12393435090780258" green="0.13952338695526123" blue="0.17475298047065735" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="plG-IK-oSm" firstAttribute="top" secondItem="Erp-g0-MKs" secondAttribute="bottom" constant="8" id="0nV-wR-jTL"/>
                             <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="Fv9-i4-vf1" secondAttribute="trailing" constant="1" id="5WI-U8-BER"/>
@@ -457,7 +457,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3lK-pg-JzC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="9371" y="-540"/>
+            <point key="canvasLocation" x="8739" y="-132"/>
         </scene>
         <!--Own Media View Controller-->
         <scene sceneID="Ohd-dq-yHq">
@@ -477,11 +477,10 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jAS-Wd-Qez" customClass="SZTextView">
                                         <rect key="frame" x="20" y="4" width="560" height="38"/>
                                         <animations/>
-                                        <color key="backgroundColor" red="0.99412128712871284" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     </view>
                                 </subviews>
                                 <animations/>
-                                <color key="backgroundColor" red="0.96078431369999995" green="0.32156862749999998" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.17843338819999999" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="jAS-Wd-Qez" firstAttribute="leading" secondItem="74X-hY-uz4" secondAttribute="leading" constant="20" id="66V-ON-Hte"/>
                                     <constraint firstAttribute="bottom" secondItem="jAS-Wd-Qez" secondAttribute="bottom" id="KDh-a5-ecQ"/>
@@ -499,7 +498,7 @@
                                     </view>
                                 </subviews>
                                 <animations/>
-                                <color key="backgroundColor" red="0.96078431369999995" green="0.32156862749999998" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.17843338819999999" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="6Mr-zC-ftp" firstAttribute="top" secondItem="8Wx-po-hoW" secondAttribute="top" id="6Q8-jV-2Qw"/>
                                     <constraint firstItem="6Mr-zC-ftp" firstAttribute="leading" secondItem="8Wx-po-hoW" secondAttribute="leading" constant="20" id="HLS-xx-pRR"/>
@@ -542,7 +541,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SCd-Pz-vwg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="9426" y="312"/>
+            <point key="canvasLocation" x="8794" y="720"/>
         </scene>
         <!--Search View Controller-->
         <scene sceneID="FxL-TC-zOB">
@@ -597,7 +596,6 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <animations/>
-                                        <color key="backgroundColor" red="0.60000002384185791" green="0.40000000596046448" blue="0.20000000298023224" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
                                             <outlet property="ibActivityIndicator" destination="9Zj-eG-fYJ" id="W3v-j5-YdX"/>
                                             <outlet property="ibStatusLabel" destination="fZl-rM-JXd" id="IOc-Bj-2pY"/>
@@ -650,7 +648,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KkK-pR-hNO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7141" y="-429"/>
+            <point key="canvasLocation" x="7173" y="-1157"/>
         </scene>
         <!--Navigation View Controller-->
         <scene sceneID="mDr-qA-ScQ">
@@ -1147,7 +1145,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cQS-0r-6vi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7141" y="1291"/>
+            <point key="canvasLocation" x="6413" y="1995"/>
         </scene>
         <!--Export-->
         <scene sceneID="4ii-N8-jNq">
@@ -1157,7 +1155,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <animations/>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
                         <sections>
                             <tableViewSection id="52d-qV-pyd">
                                 <cells>
@@ -1201,7 +1199,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7kO-DK-9XU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7114" y="2689"/>
+            <point key="canvasLocation" x="6386" y="3393"/>
         </scene>
         <!--Affiliate Token-->
         <scene sceneID="MwC-k6-ZyC">
@@ -1278,7 +1276,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oWH-u9-yT5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7141" y="1982"/>
+            <point key="canvasLocation" x="6413" y="2686"/>
         </scene>
         <!--List View Controller-->
         <scene sceneID="o9T-az-CCz">
@@ -1375,7 +1373,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g3v-3h-0yF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="8252" y="1839"/>
+            <point key="canvasLocation" x="7252" y="1575"/>
         </scene>
     </scenes>
     <resources>

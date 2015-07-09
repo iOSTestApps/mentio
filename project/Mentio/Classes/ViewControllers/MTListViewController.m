@@ -190,8 +190,6 @@
     
     for (FCModel<MTModelProtocol> *insertModel in notification.userInfo[FCModelInstanceSetKey]) {
         
-        //TODO: refactor
-        
         if (self.archive && insertModel.archived) {
             NSLog(@"archive: receive new entry");
         }
@@ -275,8 +273,6 @@
     NSIndexPath *indexPath = (NSIndexPath *)sender;
         
     FCModel<MTModelProtocol> *selectedModel = [self.dict objectAtIndexPath:indexPath ];
-    
-    //TODO: refactor, maybe with protocol
     
     if ([segue.identifier isEqualToString:MTShowOwnMediaSegueIdentifier]) {
         MTOwnMediaViewController *ownDetail = (MTOwnMediaViewController *)segue.destinationViewController;

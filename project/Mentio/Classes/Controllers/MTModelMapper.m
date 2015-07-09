@@ -152,11 +152,9 @@ NSString *const MTModelMapperKindTVEpisode = @"tv-episode";
         screenshotUrls = [dict objectForKey:@"ipadScreenshotUrls"];
     }
     
-    jsonData = [NSJSONSerialization dataWithJSONObject:screenshotUrls
-                                                   options:0 // Pass 0 if you don't care about the readability of the generated string
-                                                     error:&error];
+    jsonData = [NSJSONSerialization dataWithJSONObject:screenshotUrls options:0 error:&error];
     
-    if (! jsonData) {
+    if (!jsonData) {
         NSLog(@"Got an error: %@", error);
     } else {
         NSString *jsonString = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
@@ -223,16 +221,15 @@ NSString *const MTModelMapperKindTVEpisode = @"tv-episode";
 
 + (TVEpisode *)createTVEpisodeWithDictionary:(NSDictionary *)dict {
     TVEpisode *episode = [TVEpisode instanceWithPrimaryKey:[dict valueForKey:@"trackId"]];
-    
     [KZPropertyMapper mapValuesFrom:dict toInstance:episode usingMapping:@{
-                                                                         @"artistName":@"artistName",
-                                                                         @"trackName":@"trackName",
-                                                                         @"trackNumber":@"trackNumber",
-                                                                         @"longDescription":@"episodeDescription",
-                                                                         @"trackPrice":@"price",
-                                                                         @"currency":@"currency",
-                                                                         @"trackViewUrl":@"trackViewUrl"
-                                                                         }];
+         @"artistName":@"artistName",
+         @"trackName":@"trackName",
+         @"trackNumber":@"trackNumber",
+         @"longDescription":@"episodeDescription",
+         @"trackPrice":@"price",
+         @"currency":@"currency",
+         @"trackViewUrl":@"trackViewUrl"
+    }];
     
     return episode;
 }

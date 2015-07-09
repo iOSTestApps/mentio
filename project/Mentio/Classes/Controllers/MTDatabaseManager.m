@@ -82,6 +82,7 @@
         void (^failedAt)(int statement) = ^(int statement){
             int lastErrorCode = db.lastErrorCode;
             NSString *lastErrorMessage = db.lastErrorMessage;
+            NSLog(@"Database commit failed with Code %d and message %@", lastErrorCode, lastErrorMessage);
             [db rollback];
         };
         

@@ -43,19 +43,10 @@ NSString *const MTItunesSelectedCountryCode = @"MTItunesSelectedCountryCode";
     static MTItunesClient *_sharedClient = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        _sharedClient = [[super alloc] initWithBaseURL:nil];
+        _sharedClient = [[super alloc] initWithBaseURL:[NSURL URLWithString:@"http://itunes.apple.com/"]];
     });
     
     return _sharedClient;
-}
-
-- (instancetype)initWithSessionConfiguration:(NSURLSessionConfiguration *)configuration {
-    self = [super initWithSessionConfiguration:configuration];
-    if (self) {
-        
-    }
-    
-    return self;
 }
 
 - (instancetype)initWithBaseURL:(NSURL *)url {
@@ -84,7 +75,7 @@ NSString *const MTItunesSelectedCountryCode = @"MTItunesSelectedCountryCode";
         [params setObject:entity forKey:@"entity"];
     }
     
-    return [self GET:@"http://itunes.apple.com/search" parameters:params success:^(NSURLSessionDataTask *task, id responseObject) {
+    return [self GET:@"search" parameters:params success:^(NSURLSessionDataTask *task, id responseObject) {
         
         NSArray *results = responseObject[@"results"];
         NSMutableArray *objects = [NSMutableArray arrayWithCapacity:results.count];
@@ -121,7 +112,7 @@ NSString *const MTItunesSelectedCountryCode = @"MTItunesSelectedCountryCode";
         [params setObject:entitiy forKey:@"entity"];
     }
     
-    return [self GET:@"http://itunes.apple.com/lookup" parameters:params success:^(NSURLSessionDataTask *task, id responseObject) {
+    return [self GET:@"lookup" parameters:params success:^(NSURLSessionDataTask *task, id responseObject) {
         //success
         NSArray *results = responseObject[@"results"];
         
@@ -160,7 +151,8 @@ NSString *const MTItunesSelectedCountryCode = @"MTItunesSelectedCountryCode";
                              @"id" : [itemIds componentsJoinedByString:@","],
                              @"country" : self.selectedCountryCode
                              };
-    return [self GET:@"http://itunes.apple.com/lookup" parameters:params success:^(NSURLSessionDataTask *task, id responseObject) {
+    
+    return [self GET:@"lookup" parameters:params success:^(NSURLSessionDataTask *task, id responseObject) {
         NSArray *results = responseObject[@"results"];
         NSMutableArray *objects = [NSMutableArray arrayWithCapacity:results.count];
         

@@ -269,8 +269,8 @@
 		C5E6CEB01931D84C0042AC94 /* MTAffiliateTokenConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MTAffiliateTokenConstants.h; path = Constants/MTAffiliateTokenConstants.h; sourceTree = "<group>"; };
 		C5E6CEB11931D84C0042AC94 /* MTAffiliateTokenConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MTAffiliateTokenConstants.m; path = Constants/MTAffiliateTokenConstants.m; sourceTree = "<group>"; };
 		C5F5F96D1B32A34700C64AB2 /* MTExportTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MTExportTableViewController.swift; path = Classes/ViewControllers/MTExportTableViewController.swift; sourceTree = "<group>"; };
-		C5F5F96F1B32AB4B00C64AB2 /* 80.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 80.png; path = Mentio/Resources/Images.xcassets/AppIcon.appiconset/80.png; sourceTree = "<group>"; };
-		C5F5F9701B32AB4B00C64AB2 /* 120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 120.png; path = Mentio/Resources/Images.xcassets/AppIcon.appiconset/120.png; sourceTree = "<group>"; };
+		C5F5F96F1B32AB4B00C64AB2 /* 80.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 80.png; path = Resources/Images.xcassets/AppIcon.appiconset/80.png; sourceTree = "<group>"; };
+		C5F5F9701B32AB4B00C64AB2 /* 120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 120.png; path = Resources/Images.xcassets/AppIcon.appiconset/120.png; sourceTree = "<group>"; };
 		E56D4B5DC7A133B34F111631 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -314,8 +314,6 @@
 		C579EC2317FEDCFB00D2C3D7 = {
 			isa = PBXGroup;
 			children = (
-				C5F5F96F1B32AB4B00C64AB2 /* 80.png */,
-				C5F5F9701B32AB4B00C64AB2 /* 120.png */,
 				C579EC3517FEDCFB00D2C3D7 /* Mentio */,
 				C579EC5417FEDCFB00D2C3D7 /* MentioTests */,
 				C579EC2E17FEDCFB00D2C3D7 /* Frameworks */,
@@ -507,6 +505,8 @@
 				C5D2AF081906C22E00D1FE58 /* Other-Sources */,
 				C5CCAFFB18803CF50081E43B /* Fonts */,
 				C5D2AE9F19069B1300D1FE58 /* Images.xcassets */,
+				C5F5F96F1B32AB4B00C64AB2 /* 80.png */,
+				C5F5F9701B32AB4B00C64AB2 /* 120.png */,
 				C5D2AE97190697F500D1FE58 /* Nibs */,
 				C5D2AE9C19069A4F00D1FE58 /* Storyboards */,
 			);
