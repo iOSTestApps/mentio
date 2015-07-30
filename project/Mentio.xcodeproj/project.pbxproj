@@ -7,8 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3308C78D1D2B20C759CFF481 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEFE0976D1C5CA1E677FE698 /* AssetsLibrary.framework */; };
 		54AC86CA0D5241FD9F38F9C4 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 849A3996108447BDB74D90F6 /* libPods.a */; };
 		7C3CB9D2762D4756B76D5175 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 849A3996108447BDB74D90F6 /* libPods.a */; };
+		7DDB199FCB73DB162CEB06B7 /* BuddyBuildSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01BAEA121F11AC610C52DC8B /* BuddyBuildSDK.framework */; };
+		886978C43252770765DF4708 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58CE2DA7DAD3B0876BBA4631 /* CoreText.framework */; };
 		C51605461906F251004EA59A /* MTScrollCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C51605451906F251004EA59A /* MTScrollCell.xib */; };
 		C537649D1B33FD0A00C36640 /* MTNotificationConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = C537649C1B33FD0A00C36640 /* MTNotificationConstants.m */; };
 		C561866119AB51EB00E20DC5 /* MTModelActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C561866019AB51EB00E20DC5 /* MTModelActivity.swift */; };
@@ -110,8 +113,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		01BAEA121F11AC610C52DC8B /* BuddyBuildSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BuddyBuildSDK.framework; sourceTree = "<group>"; };
 		2D3E30F60EE3C3927B3A61FC /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		58CE2DA7DAD3B0876BBA4631 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		849A3996108447BDB74D90F6 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		BEFE0976D1C5CA1E677FE698 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 		C51605451906F251004EA59A /* MTScrollCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MTScrollCell.xib; path = Mentio/Resources/Nibs/MTScrollCell.xib; sourceTree = SOURCE_ROOT; };
 		C519189E1A73CAF200EFA255 /* Mentio-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Mentio-Bridging-Header.h"; path = "Classes/Misc-Classes/Mentio-Bridging-Header.h"; sourceTree = "<group>"; };
 		C533AB4F1808015F00DDF6E5 /* libPods.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPods.a; path = "Pods/build/Debug-iphoneos/libPods.a"; sourceTree = "<group>"; };
@@ -285,6 +291,9 @@
 				C579EC3417FEDCFB00D2C3D7 /* UIKit.framework in Frameworks */,
 				C579EC3017FEDCFB00D2C3D7 /* Foundation.framework in Frameworks */,
 				7C3CB9D2762D4756B76D5175 /* libPods.a in Frameworks */,
+				7DDB199FCB73DB162CEB06B7 /* BuddyBuildSDK.framework in Frameworks */,
+				3308C78D1D2B20C759CFF481 /* AssetsLibrary.framework in Frameworks */,
+				886978C43252770765DF4708 /* CoreText.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,6 +356,9 @@
 				C579EC3317FEDCFB00D2C3D7 /* UIKit.framework */,
 				C579EC4E17FEDCFB00D2C3D7 /* XCTest.framework */,
 				849A3996108447BDB74D90F6 /* libPods.a */,
+				01BAEA121F11AC610C52DC8B /* BuddyBuildSDK.framework */,
+				BEFE0976D1C5CA1E677FE698 /* AssetsLibrary.framework */,
+				58CE2DA7DAD3B0876BBA4631 /* CoreText.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
