@@ -57,6 +57,11 @@ EXTERNAL SOURCES:
     :commit: 8a32520dc12b417d80e3167cd0da6da213136028
     :git: https://github.com/mhaddl/URBMediaFocusViewController.git
 
+CHECKOUT OPTIONS:
+  URBMediaFocusViewController:
+    :commit: 8a32520dc12b417d80e3167cd0da6da213136028
+    :git: https://github.com/mhaddl/URBMediaFocusViewController.git
+
 SPEC CHECKSUMS:
   AFNetworking: 96ac9bf3eda33582701cb1fcc5b896aa1e20311e
   CountryPicker: 6f166e2f1cc250f07eba4c587fbe1c0efc21049b
@@ -71,4 +76,4 @@ SPEC CHECKSUMS:
   SZTextView: c814e6dcb2303e3e79feb0fd27cf44d74e3c59a6
   URBMediaFocusViewController: 3e2412ae91bcd7e09c324933ee4332d72f7d39bf
 
-COCOAPODS: 0.37.2
+COCOAPODS: 0.37.1
