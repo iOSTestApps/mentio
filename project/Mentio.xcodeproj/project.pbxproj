@@ -8,7 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		54AC86CA0D5241FD9F38F9C4 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 849A3996108447BDB74D90F6 /* libPods.a */; };
+		5847A87A996B1B4E7996BF25 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7979D2207FAEE446D8A02D19 /* SystemConfiguration.framework */; };
+		5DBACE80DCFD80D4FB85A11C /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65CE060734F83DBA75E7B577 /* CoreText.framework */; };
+		69F1484D6E3C35DABB7F6FA2 /* BuddyBuildSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 131D39F334B885D7F0C14F50 /* BuddyBuildSDK.framework */; };
 		7C3CB9D2762D4756B76D5175 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 849A3996108447BDB74D90F6 /* libPods.a */; };
+		8E01543098B82DCCAB538B12 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F6FF679C31208B727031F0C /* CoreTelephony.framework */; };
+		AB4764F92A572E6788900FD4 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E02E433694215A33596ECB4 /* AssetsLibrary.framework */; };
 		C51605461906F251004EA59A /* MTScrollCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C51605451906F251004EA59A /* MTScrollCell.xib */; };
 		C537649D1B33FD0A00C36640 /* MTNotificationConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = C537649C1B33FD0A00C36640 /* MTNotificationConstants.m */; };
 		C561866119AB51EB00E20DC5 /* MTModelActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C561866019AB51EB00E20DC5 /* MTModelActivity.swift */; };
@@ -110,7 +115,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		131D39F334B885D7F0C14F50 /* BuddyBuildSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BuddyBuildSDK.framework; sourceTree = "<group>"; };
 		2D3E30F60EE3C3927B3A61FC /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		5F6FF679C31208B727031F0C /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		65CE060734F83DBA75E7B577 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		6E02E433694215A33596ECB4 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		7979D2207FAEE446D8A02D19 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		849A3996108447BDB74D90F6 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		C51605451906F251004EA59A /* MTScrollCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MTScrollCell.xib; path = Mentio/Resources/Nibs/MTScrollCell.xib; sourceTree = SOURCE_ROOT; };
 		C519189E1A73CAF200EFA255 /* Mentio-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Mentio-Bridging-Header.h"; path = "Classes/Misc-Classes/Mentio-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -285,6 +295,11 @@
 				C579EC3417FEDCFB00D2C3D7 /* UIKit.framework in Frameworks */,
 				C579EC3017FEDCFB00D2C3D7 /* Foundation.framework in Frameworks */,
 				7C3CB9D2762D4756B76D5175 /* libPods.a in Frameworks */,
+				69F1484D6E3C35DABB7F6FA2 /* BuddyBuildSDK.framework in Frameworks */,
+				AB4764F92A572E6788900FD4 /* AssetsLibrary.framework in Frameworks */,
+				5DBACE80DCFD80D4FB85A11C /* CoreText.framework in Frameworks */,
+				8E01543098B82DCCAB538B12 /* CoreTelephony.framework in Frameworks */,
+				5847A87A996B1B4E7996BF25 /* SystemConfiguration.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,6 +362,11 @@
 				C579EC3317FEDCFB00D2C3D7 /* UIKit.framework */,
 				C579EC4E17FEDCFB00D2C3D7 /* XCTest.framework */,
 				849A3996108447BDB74D90F6 /* libPods.a */,
+				131D39F334B885D7F0C14F50 /* BuddyBuildSDK.framework */,
+				6E02E433694215A33596ECB4 /* AssetsLibrary.framework */,
+				65CE060734F83DBA75E7B577 /* CoreText.framework */,
+				5F6FF679C31208B727031F0C /* CoreTelephony.framework */,
+				7979D2207FAEE446D8A02D19 /* SystemConfiguration.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
