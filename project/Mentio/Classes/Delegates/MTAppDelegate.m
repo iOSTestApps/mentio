@@ -14,6 +14,7 @@
 #import "MTItunesClient.h"
 #import "SVProgressHUD.h"
 #import "MTNotificationConstants.h"
+#import <BuddyBuildSDK/BuddyBuildSDK.h>
 
 @interface MTAppDelegate ()
 
@@ -24,6 +25,8 @@
 @implementation MTAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    [BuddyBuildSDK setup];
+    
     [MTDatabaseManager setUpFCModel];
     
     [[[MTThemer alloc] init] applyDefaultTheme];
